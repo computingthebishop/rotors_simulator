@@ -38,8 +38,10 @@
   <xacro:property name="motor_constant" value="4.138394792004922e-06" /> <!-- [kg.m/s^2] -->
   <xacro:property name="moment_constant" value="0.016894178436859097" /> <!-- [m] -->
   <!-- The following two parameters indicate the dynamic response of the motor, given a desired rotation speed -->
-  <xacro:property name="time_constant_up" value="0.001" /> <!-- [s] -->
-  <xacro:property name="time_constant_down" value="0.001" /> <!-- [s] -->
+  <!-- xacro:property name="time_constant_up" value="0.001" />  -->
+  <!-- xacro:property name="time_constant_down" value="0.001" />  -->
+  <xacro:property name="time_constant_up" value= "$(arg motor_time_cnt)" /> <!-- [s] -->
+  <xacro:property name="time_constant_down" value= "$(arg motor_time_cnt)" /> <!-- [s] -->
 
   <xacro:property name="max_rot_velocity" value="2237" /> <!-- [rad/s] (21357 rpm) -->
   <xacro:property name="sin30" value="0.5" />
